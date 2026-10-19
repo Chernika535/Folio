@@ -84,3 +84,5 @@ def main():
     (ROOT/"articles.json").write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding="utf-8")
     print("Indexed",len(unique),"articles from",payload["sources_with_articles"],"of",len(sources),"sources")
 if __name__=="__main__":main()
+
+# Initial scheduled index build enabled.
