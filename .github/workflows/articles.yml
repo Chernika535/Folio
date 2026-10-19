@@ -17,8 +17,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: pip install requests feedparser beautifulsoup4
+      - run: pip install requests beautifulsoup4 trafilatura
       - run: python scripts/build_articles.py
+        timeout-minutes: 18
       - name: Commit updated index
         run: |
           git config user.name "github-actions[bot]"
